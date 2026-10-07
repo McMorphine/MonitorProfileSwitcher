@@ -36,6 +36,21 @@
                 <version>3.11.0</version>
             </plugin>
 
+            <plugin>
+                <groupId>io.github.fvarrui</groupId>
+                <artifactId>javapackager</artifactId>
+                <version>1.7.6</version>
+                <configuration>
+                    <mainClass>Main</mainClass>
+                    <bundleJre>true</bundleJre>
+                    <customizedJre>false</customizedJre>  <!-- ВОТ ЭТА СТРОКА -->
+                    <platform>windows</platform>
+                    <name>DisplaySwitcher</name>
+                    <outputDirectory>${project.build.directory}/exe</outputDirectory>
+                    <generateInstaller>false</generateInstaller>
+                </configuration>
+            </plugin>
+
             <!-- Сборка исполняемого JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -44,7 +59,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.example.Main</mainClass>
+                            <mainClass>Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -64,7 +79,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.example.Main</mainClass>
+                    <mainClass>Main</mainClass>
                     <bundleJre>true</bundleJre>
                     <platform>windows</platform>
                     <name>DisplaySwitcher</name>
