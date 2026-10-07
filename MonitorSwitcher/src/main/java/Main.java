@@ -216,7 +216,7 @@ public class Main {
             double pivotY = holeY + holeSize / 2.0;
 
             // -90° = вверх, +90° = вниз
-            double angleDeg = on ? -180 : 180;
+            double angleDeg = on ? 0 : 180;
             double angle = Math.toRadians(angleDeg);
             double leverLength = 52;
 
